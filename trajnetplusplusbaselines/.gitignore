@@ -1,11 +1,12 @@
+collision_test/
+real_data/
+trajdata/
 data/
 dest/
 dest_new/
 aicrowd_submissions/
 goal_files/
 
-DATA_BLOCK/
-output/
 OUTPUT_BLOCK/
 socialforce-master/
 profile_trace*.json
@@ -19,7 +20,6 @@ evaluator/old_table/
 evaluator/nll.py
 	
 *.txt
-*.png
 *.sh
 *.run
 *.pt
