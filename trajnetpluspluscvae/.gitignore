@@ -8,6 +8,9 @@ aicrowd_submissions/
 goal_files/
 
 OUTPUT_BLOCK/
+DATA_BLOCK/output/test_pred/
+DATA_BLOCK/output_smoke/test_pred/
+final_report_artifacts/predictions/
 socialforce-master/
 profile_trace*.json
 Python-RVO2-master/
@@ -53,4 +56,3 @@ trajnetbaselines/style_lstm/
 trajnetbaselines/lstm/style_encoder.py
 tests/test_style.py
 trajnetbaselines/wta_lstm_backup/
-
