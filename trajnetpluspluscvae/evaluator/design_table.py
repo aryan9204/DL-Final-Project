@@ -86,7 +86,7 @@ class Table(object):
 
         return ax
 
-    def print_table(self):
+    def print_table(self, output_path='Results.png'):
         fig = plt.figure(figsize=(20, 20))
     # ------------------------------------------ TABLES -------------------------------------------
         # Overall Table #
@@ -174,5 +174,6 @@ class Table(object):
 
 
         ax2 = self.render_mpl_table(df, header_columns=0, col_width=2.0, bbox=[0, -1.6, 1, 0.6*len(self.results)], ax=ax2)
-        fig.savefig('Results.png')
+        fig.savefig(output_path)
+        plt.close(fig)
     

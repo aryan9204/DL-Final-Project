@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from collections import defaultdict, OrderedDict
 import argparse
 
@@ -257,5 +258,18 @@ def trajnet_evaluate(args):
         # Add results to Table
         final_result, sub_final_result = table.add_entry(labels[num], results)
 
-    # Output Result Table
-    table.print_table()
+    # Output Result Table. Save a model-specific filename when evaluating one model
+    # so repeated evaluator runs do not overwrite each other.
+    results_name = getattr(args, 'results_name', None)
+    if results_name:
+        output_path = results_name
+    elif len(model_names) == 1:
+        output_path = f'Results_{model_names[0]}.png'
+    else:
+        output_path = 'Results.png'
+
+    output_dir = Path(output_path).parent
+    if str(output_dir) not in ('', '.'):
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+    table.print_table(output_path=output_path)

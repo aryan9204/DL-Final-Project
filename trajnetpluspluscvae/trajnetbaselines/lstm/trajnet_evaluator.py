@@ -86,6 +86,8 @@ def main():
                         help='augment scenes')
     parser.add_argument('--modes', default=1, type=int,
                         help='number of modes to predict')
+    parser.add_argument('--results_name', default=None,
+                        help='output path for the evaluator results image')
     args = parser.parse_args()
 
     np.seterr(all='ignore')
