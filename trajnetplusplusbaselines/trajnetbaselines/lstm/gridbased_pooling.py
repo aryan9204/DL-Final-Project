@@ -13,7 +13,7 @@ def one_cold(i, n):
     return x
 
 class GridBasedPooling(torch.nn.Module):
-    def __init__(self, cell_side=2.0, n=4, hidden_dim=128, out_dim=None,
+    def __init__(self, cell_side=2.0, n=4, hidden_dim=128, out_dim=32,
                  type_='occupancy', pool_size=1, blur_size=1, front=False,
                  embedding_arch='one_layer', pretrained_pool_encoder=None,
                  constant=0, norm=0, layer_dims=None, latent_dim=16):

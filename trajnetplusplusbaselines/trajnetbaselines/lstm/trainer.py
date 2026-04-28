@@ -419,12 +419,12 @@ def main(epochs=25):
     random.seed(args.seed)
 
     ## Define location to save trained model
-    if not os.path.exists('TEST_BLOCK/{}'.format(args.path)):
-        os.makedirs('TEST_BLOCK/{}'.format(args.path))
+    if not os.path.exists('TEST_BLOCK/social_retrain'):
+        os.makedirs('TEST_BLOCK/social_retrain')
     if args.goals:
-        args.output = 'TEST_BLOCK/{}/lstm_goals_{}_{}.pkl'.format(args.path, args.type, args.output)
+        args.output = 'TEST_BLOCK/social_retrain/lstm_goals_{}_{}.pkl'.format(args.type, args.output)
     else:
-        args.output = 'TEST_BLOCK/{}/lstm_{}_{}.pkl'.format(args.path, args.type, args.output)
+        args.output = 'TEST_BLOCK/social_retrain/lstm_{}_{}.pkl'.format(args.type, args.output)
 
     # configure logging
     from pythonjsonlogger import jsonlogger

@@ -174,5 +174,5 @@ class Table(object):
 
 
         ax2 = self.render_mpl_table(df, header_columns=0, col_width=2.0, bbox=[0, -1.6, 1, 0.6*len(self.results)], ax=ax2)
-        fig.savefig('Results.png')
+        fig.savefig('social_retrain.png')
     
