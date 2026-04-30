@@ -482,7 +482,7 @@ def main(epochs=25):
     if args.goals:
         args.output = 'OUTPUT_BLOCK/{}/vae_goals_{}_{}.pkl'.format(args.path, args.type, args.output)
     else:
-        args.output = 'OUTPUT_BLOCK/{}/vae_{}_{}.pkl'.format(args.path, args.type, args.output)
+        args.output = 'OUTPUT_BLOCK/{}/vae_{}_kl_penalty.pkl'.format(args.path, args.type)
 
     # configure logging
     from pythonjsonlogger import jsonlogger

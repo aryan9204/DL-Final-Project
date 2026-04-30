@@ -86,7 +86,7 @@ class Table(object):
 
         return ax
 
-    def print_table(self, output_path='Results.png'):
+    def print_table(self, output_path='cvae_vanilla_augmentation.png'):
         fig = plt.figure(figsize=(20, 20))
     # ------------------------------------------ TABLES -------------------------------------------
         # Overall Table #
